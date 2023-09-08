@@ -79,13 +79,14 @@ let ids = () => {
             })
             .then(data => {
                 var arr = [];
+                var month1 = document.querySelector(".months1")
                 // const today = new Date();
                 // today.setMonth(today.getMonth() - 1)
                 // var dateString = today.getFullYear() + "-" + "0" + (today.getMonth() + 1) + "-" + today.getDate() + "T00:00:00Z";
                 console.log(data)
                 // console.log(dateString)
                 const today = new Date();
-                today.setMonth(today.getMonth() - 1);
+                today.setMonth(today.getMonth() - month1.value);
                 const dateString = today.toISOString(); // This gives you the formatted date string
                 console.log(dateString)
 
@@ -272,13 +273,14 @@ let ids2 = () => {
             .then(data => {
                 console.log('ids2')
                 var arr = [];
+                var month = document.querySelector(".months2")
                 // const today = new Date();
                 // today.setMonth(today.getMonth() - 1)
                 // var dateString = today.getFullYear() + "-" + "0" + (today.getMonth() + 1) + "-" + today.getDate() + "T00:00:00Z";
                 console.log(data)
                 // console.log(dateString)
                 const today = new Date();
-                today.setMonth(today.getMonth() - 1);
+                today.setMonth(today.getMonth() - month.value);
                 const dateString = today.toISOString(); // This gives you the formatted date string
                 console.log(dateString)
 
